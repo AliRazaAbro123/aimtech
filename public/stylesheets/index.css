@@ -34,9 +34,17 @@
               content: "";
               position: absolute;
               inset: 0;
-              background-color: rgba(0, 2, 131, 0.5);
+              background-color: rgba(34, 50, 83, 0.85);
+              /* Darker overlay */
               z-index: 2;
               height: 50rem;
+              transition: background-color 0.5s ease;
+              /* Smooth transition */
+}
+
+.topPage:hover::before {
+              background-color: rgba(34, 50, 83, 0.6);
+              /* Darker on hover */
 }
 
 .topPage>* {
@@ -1290,17 +1298,18 @@ footer .footerBottom .links a {
 
 @media only screen and (max-width: 768px) {
               header {
-                            padding: 1rem;
+                            padding: 1rem 0;
                             border-bottom: none;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            overflow: hidden;
               }
 
               header a img {
-                            width: 100px;
+                            width: 110px;
                             height: auto;
-                            max-height: 50px;
+                            max-height: 55px;
                             object-fit: contain;
               }
 
@@ -1308,28 +1317,32 @@ footer .footerBottom .links a {
                             display: none;
               }
 
-              header #humberger,
-              header #close {
-                            font-size: 1.8rem;
+              header #humberger {
+                            font-size: 1.6rem;
                             cursor: pointer;
                             display: block;
               }
 
               header #close {
                             display: none;
+                            font-size: 1.6rem;
+                            cursor: pointer;
               }
 
               .topPage {
-                            height: 30rem;
+                            height: auto;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
                             position: relative;
+                            padding: 0 1rem;
               }
 
               .topPage::before {
-                            height: 30rem;
+                            height: auto;
+                            background-color: rgba(34, 50, 83, 0.8);
+                            backdrop-filter: blur(2px);
               }
 
               .topPage .subNav {
@@ -1347,20 +1360,23 @@ footer .footerBottom .links a {
                             display: flex;
                             flex-direction: column;
                             gap: 1rem;
-                            background-color: #ffffff;
-                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            background-color: #212d4585;
+                            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.637);
+                            backdrop-filter: blur(10px);
               }
 
               .topPage .subNav nav a {
                             font-size: 1rem;
                             font-weight: 600;
-                            color: #000000;
+                            color: #ffffff;
                             text-decoration: none;
                             transition: color 0.3s ease;
+                            padding: 1rem;
               }
 
               .topPage .subNav nav a:hover {
-                            color: #007BFF;
+                            width: 100%;
+                            background-color: #2a3c61;
               }
 
               .topPage .navbar {
@@ -1373,8 +1389,8 @@ footer .footerBottom .links a {
               }
 
               .topPage .homeContent {
-                            padding: 20rem 10px;
-                            gap: 4rem;
+                            padding: 8rem 10px;
+                            gap: 2rem;
               }
 
               .topPage .homeContent h3 {
@@ -1383,20 +1399,33 @@ footer .footerBottom .links a {
 
               .topPage .homeContent h1 {
                             font-size: 2.8rem;
+                            line-height: 2.6rem;
               }
 
               .topPage .homeContent .links {
                             width: 100%;
-                            gap: 1rem;
+                            gap: 2rem;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: center;
+                            padding: 2px;
               }
 
-              .topPage .homeContent .links #servicebtn a,
-              #contactbtn a {
-                            padding: 0.8rem 1.2rem;
+              .topPage .homeContent .links #servicebtn a {
+                            padding: 0.8rem;
+                            font-size: 1.2rem;
+                            font-weight: normal;
+              }
+
+              .topPage .homeContent .links #contactbtn a {
+                            padding: 0.8rem;
+                            font-size: 1.2rem;
+                            font-weight: normal;
               }
 
               .about {
-                            top: 10px;
+                            top: 0;
+                            padding: 0;
               }
 
               .about .aboutTop {
@@ -1413,10 +1442,62 @@ footer .footerBottom .links a {
                             gap: 1rem;
               }
 
+              .about .aboutTop .left h3,
+              h1,
+              p {
+                            text-align: left;
+              }
+
               .about .aboutTop .rightSide {
                             width: 100%;
                             height: auto;
                             justify-content: center;
+                            border: none;
+              }
+
+              .about .aboutTop .rightSide .topSide {
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                            height: 16rem;
+              }
+
+              .about .aboutTop .rightSide .bottomSide {
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                            height: 16rem;
+              }
+
+              .about .aboutTop .rightSide .topSide .topleft {
+                            width: 100%;
+                            border-bottom: 1px solid grey;
+                            align-items: start;
+                            padding: 1rem;
+                            border-right: none;
+              }
+
+              .about .aboutTop .rightSide .topSide .topright {
+                            width: 100%;
+                            border-bottom: 1px solid grey;
+                            align-items: start;
+                            padding: 1rem;
+              }
+
+              .about .aboutTop .rightSide .bottomSide .bottomleft {
+                            width: 100%;
+                            border-bottom: 1px solid grey;
+                            align-items: start;
+                            padding: 1rem;
+                            border-right: none;
+              }
+
+              .about .aboutTop .rightSide .bottomSide .bottomright {
+                            width: 100%;
+                            border-bottom: 1px solid grey;
+                            align-items: start;
+                            padding: 1rem;
+
               }
 
               .about .bottom {
@@ -1616,6 +1697,7 @@ footer .footerBottom .links a {
               footer .footerTop {
                             flex-direction: column;
                             align-items: center;
+                            text-align: center;
               }
 
               footer .footerLeft {
@@ -1626,6 +1708,9 @@ footer .footerBottom .links a {
               footer .footerRight {
                             width: 100%;
                             align-items: center;
+              }
+
+              footer .footerRight p {
                             text-align: center;
               }
 
@@ -1633,5 +1718,7 @@ footer .footerBottom .links a {
                             flex-direction: column;
                             justify-content: center;
                             border-top: 1px solid grey;
+                            text-align: center;
+                            padding: 1rem 0;
               }
 }

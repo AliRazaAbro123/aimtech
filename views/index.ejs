@@ -20,11 +20,12 @@
     
   </head>
   <body>
+    <main id="smooth-wrapper">
     <div class="container">
       <!-- Top page elements starts here------------------------>
-      <div class="topPage">
+      <div class="topPage" id="Home">
         <header>
-          <a href="/"><img src="../assets/logo.png" alt="Logo" /></a>
+          <a href="#Home"><img src="../assets/logo.png" alt="Logo" /></a>
           <div class="links">
             <a href="https://www.facebook.com/aimechanics/" target="_blank"
               ><i class="fab fa-facebook-f"></i
@@ -59,7 +60,7 @@
         </header>
         <div class="subNav">
           <nav>
-            <a href="/">Home</a>
+            <a href="#Home">Home</a>
             <a href="#Projects">Projects</a>
             <a href="#Services">Services</a>
             <a href="#Team">Team</a>
@@ -68,7 +69,7 @@
         </div>
         <div class="navbar">
           <nav>
-            <a href="/">Home</a>
+            <a href="#Home">Home</a>
             <a href="#Projects">Projects</a>
             <a href="#Services">Services</a>
             <a href="#Team">Team</a>
@@ -83,7 +84,7 @@
             <button id="servicebtn">
               <a href="#Services">OUR SERVICES</a>
             </button>
-            <button id="contactbtn"><a href="#contact">CONTACT US</a></button>
+            <button id="contactbtn"><a href="#Contact">CONTACT US</a></button>
           </div>
         </div>
       </div>
@@ -304,7 +305,7 @@
       </div>
       <!-- Projects elements Ends here------------------------>
       <!-- Team elements Starts here------------------------>
-      <div class="team">
+      <div class="team" id="Team">
         <h1 id="teamTitle">Our Core Team</h1>
         <div class="top">
           <div class="image1">
@@ -354,7 +355,7 @@
       </div>
       <!-- Team elements Ends here------------------------>
       <!-- Our clients elements Ends here------------------------>
-      <div class="clients">
+      <div class="clients" id="Clients">
         <h1 id="title">Our Amazing Clients</h1>
         <div class="images">
           <img src="../assets/client1.png" alt="Clients" />
@@ -406,7 +407,7 @@
       </div>
       <!-- Our clients elements Ends here------------------------>
       <!-- Quote elements Ends here------------------------>
-      <div class="quote">
+      <div class="quote" id="Quote">
         <div class="request">
           <h1>Request a Quote</h1>
           <h3>Ready to Work Together? Build a project with us!</h3>
@@ -472,7 +473,7 @@
       </div>
       <!-- Quote elements Ends here------------------------>
       <!-- Contact elements Ends here------------------------>
-      <div class="contact">
+      <div class="contact" id="Contact">
         <div class="contactLeft">
           <h1>Get In Touch With Us!</h1>
           <h3>Learn More About Jabbar</h3>
@@ -552,6 +553,7 @@
       </footer>
       <!-- Footer elements Ends here------------------------>
     </div>
+  </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script>
